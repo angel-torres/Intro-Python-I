@@ -45,8 +45,11 @@ print(waypoints)
 # value is -130 and change its name to "not a real place"
 # YOUR CODE HERE
 
-waypoints[0] = {"lon": -130, "name":"a place"}
+for index, place in enumerate(waypoints):
+    if place["name"] == "a place":
+        waypoints[index]["name"] = "not a real place"
+        waypoints[index]["lon"] = -130
 
-print(list(waypoints[0]))
+print(waypoints[0])
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
